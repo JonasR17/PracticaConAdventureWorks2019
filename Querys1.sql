@@ -1,10 +1,10 @@
 --Selecciona todos los campos de la tabla Employee. //
 --Selecciona el nombre y apellido de todos los empleados. // 
 --Encuentra todos los productos cuyo nombre de producto contenga la palabra 'Bike'. //
---Lista todos los productos con su precio de venta.
---Obtén el número total de clientes en la tabla Customer.
---Muestra los nombres de todas las categorías de productos.
---Encuentra los empleados que tienen un correo electrónico que termina en '@adventure-works.com'.
+--Lista todos los productos con su precio de venta.//
+--Obtén el número total de clientes en la tabla Customer.//
+--Muestra los nombres de todas las categorías de productos.//
+--Encuentra los empleados que tienen un correo electrónico que termina en '@adventure-works.com'.//
 --Selecciona los nombres de los vendedores y sus territorios.
 --Lista todos los clientes en la ciudad de 'London'.
 --Cuenta cuántos productos tienen un precio de lista mayor a $1000.
@@ -18,3 +18,26 @@
 --Encuentra todos los productos cuyo precio de lista sea mayor a $500 y que estén en la categoría 'Components'.
 --Muestra los nombres y los correos electrónicos de los empleados que pertenecen al departamento 'Engineering'.
 --Cuenta cuántos productos hay en cada subcategoría y ordénalos por este conteo.
+
+Select * from HumanResources.Employee
+
+Select FirstName as Nombre, LastName as Apellido from Person.Person
+
+Select * from Production.Product where Name Like '%Bike%'
+
+Select Name as Nombre, ListPrice as ListaPrecios from Production.Product 
+
+Select count(*)  ClientesTotales from Sales.Customer
+
+Select * from Production.ProductCategory Name 
+inner join Production.ProductSubcategory on Name.ProductCategoryID = ProductSubcategoryID
+
+
+
+--Select * from Person.P Person.EmailAddress Where EmailAddress Like '%@adventure-works.com'
+
+
+
+
+
+
