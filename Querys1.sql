@@ -1,6 +1,6 @@
---Selecciona todos los campos de la tabla Employee.
---Selecciona el nombre y apellido de todos los empleados.
---Encuentra todos los productos cuyo nombre de producto contenga la palabra 'Bike'.
+--Selecciona todos los campos de la tabla Employee. //
+--Selecciona el nombre y apellido de todos los empleados. // 
+--Encuentra todos los productos cuyo nombre de producto contenga la palabra 'Bike'. //
 --Lista todos los productos con su precio de venta.
 --Obtén el número total de clientes en la tabla Customer.
 --Muestra los nombres de todas las categorías de productos.
