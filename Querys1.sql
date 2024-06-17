@@ -1,12 +1,41 @@
 --Selecciona todos los campos de la tabla Employee. //
+Select * from HumanResources.Employee
+
 --Selecciona el nombre y apellido de todos los empleados. // 
+Select FirstName as Nombre, LastName as Apellido from Person.Person
+
 --Encuentra todos los productos cuyo nombre de producto contenga la palabra 'Bike'. //
+Select * from Production.Product where Name Like '%Bike%'
+
+
 --Lista todos los productos con su precio de venta.//
+Select Name as Nombre, ListPrice as ListaPrecios from Production.Product
+
 --Obtén el número total de clientes en la tabla Customer.//
+Select count(*)  ClientesTotales from Sales.Customer
+
+
 --Muestra los nombres de todas las categorías de productos.//
+Select * from Production.ProductCategory Name 
+inner join Production.ProductSubcategory on Name.ProductCategoryID = ProductSubcategoryID
+
 --Encuentra los empleados que tienen un correo electrónico que termina en '@adventure-works.com'.//
+Select * from Person.P Person.EmailAddress Where EmailAddress Like '%@adventure-works.com'
 --Selecciona los nombres de los vendedores y sus territorios. 
 --Lista todos los clientes en la ciudad de 'London'. 
+
+SELECT 
+    CustomerID,
+  FirstName,
+    LastName,
+    City
+FROM 
+    Sales.Customer AS c
+    JOIN Person.Person AS p ON c.PersonID = p.BusinessEntityID
+    JOIN Person.BusinessEntityAddress AS bea ON p.BusinessEntityID = bea.BusinessEntityID
+    JOIN Person.Address AS a ON bea.AddressID = a.AddressID
+WHERE 
+    a.City = 'London';
 --Cuenta cuántos productos tienen un precio de lista mayor a $1000.
 --Selecciona los 10 primeros empleados ordenados por su fecha de nacimiento.
 --Obtén el nombre y el precio de los productos que están descontinuados (discontinued).
@@ -19,18 +48,20 @@
 --Muestra los nombres y los correos electrónicos de los empleados que pertenecen al departamento 'Engineering'.
 --Cuenta cuántos productos hay en cada subcategoría y ordénalos por este conteo. //
 
-Select * from HumanResources.Employee
 
-Select FirstName as Nombre, LastName as Apellido from Person.Person
 
-Select * from Production.Product where Name Like '%Bike%'
 
-Select Name as Nombre, ListPrice as ListaPrecios from Production.Product 
 
-Select count(*)  ClientesTotales from Sales.Customer
 
-Select * from Production.ProductCategory Name 
-inner join Production.ProductSubcategory on Name.ProductCategoryID = ProductSubcategoryID
+
+select 
+	CustomerID,
+	FirtsName,
+ 
+
+
+
+
 
 Select count(*)  Totales from Production.ProductSubcategory
 
@@ -42,7 +73,8 @@ ORDER BY ProductCategoryID
 
 
 
---Select * from Person.P Person.EmailAddress Where EmailAddress Like '%@adventure-works.com'
+
+
 
 
 
